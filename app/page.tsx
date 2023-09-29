@@ -8,6 +8,7 @@ export default async function Home() {
 
     revalidatePath("/");
   };
+
   const now = await getNow();
   return (
     <main className="m-4 p-4 border-2 border-blue-500">
