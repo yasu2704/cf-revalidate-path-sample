@@ -1,6 +1,3 @@
-"use server";
-
-import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 
 export async function getNow() {
@@ -11,6 +8,5 @@ export async function getNow() {
     cache: "force-cache",
   });
   const { now } = await res.json();
-  revalidatePath("/");
   return now;
 }
